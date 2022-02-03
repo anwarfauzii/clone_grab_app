@@ -33,8 +33,8 @@ class _MainPageState extends State<MainPage> {
       }
     }
 
-    return Scaffold(
-      bottomNavigationBar: SizedBox(
+    bottomNavBar() {
+      return SizedBox(
         height: 60,
         child: BottomNavigationBar(
           currentIndex: currentIndex,
@@ -89,7 +89,12 @@ class _MainPageState extends State<MainPage> {
                 label: 'Account'),
           ],
         ),
-      ),
+      );
+    }
+
+    return Scaffold(
+      backgroundColor: whiteColor,
+      bottomNavigationBar: bottomNavBar(),
       body: body(),
     );
   }

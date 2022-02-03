@@ -1,3 +1,5 @@
+import 'package:clone_grab/ui/pages/home/main_page.dart';
+
 import 'ui/pages/splash_screen_page.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashScreenPage(),
+      home: MainPage(),
     );
   }
 }
