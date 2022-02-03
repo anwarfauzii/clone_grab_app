@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 Color bgGreenColor = const Color(0xff58BC6B);
 Color bgGreyColor = const Color(0xffF9F9F9);
+Color bgMenuUnselectColor = const Color(0xff9A9A9A);
 Color greenColor = const Color(0xff4FAE5A);
 Color greenColor2 = const Color(0xff61BD79);
 Color whiteColor = const Color(0xffFFFFFF);
@@ -13,6 +14,7 @@ Color blueColor = const Color(0xff3478F6);
 Color blueColor2 = const Color(0xff007AFF);
 Color blueColor3 = const Color(0xff5B8EDC);
 Color blueColor4 = const Color(0xff49A2CB);
+
 
 Color transparentColor = Colors.transparent;
 
