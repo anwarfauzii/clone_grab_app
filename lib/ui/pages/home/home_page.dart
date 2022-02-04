@@ -1,5 +1,6 @@
 import 'package:clone_grab/ui/shared/theme.dart';
 import 'package:clone_grab/ui/widget/card_other_feature.dart';
+import 'package:clone_grab/ui/widget/card_promo.dart';
 import 'package:clone_grab/ui/widget/custom_menu.dart';
 import 'package:flutter/material.dart';
 
@@ -68,48 +69,114 @@ class HomePage extends StatelessWidget {
       );
     }
 
-    return Column(
+    return ListView(
+      shrinkWrap: true,
       children: [
-        Container(
-          width: double.infinity,
-          height: 64,
-          color: bgGreenColor,
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 12.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const SizedBox(height: 63),
-              // ElevatedButton(
-              //     onPressed: () {
-              //       print(menuList);
-              //     },
-              //     child: Text('Cek')),
-              handleMenu(),
-              const SizedBox(height: 30),
-              Row(
-                children: const [
-                  CardOtherFeature(
-                      title: 'Activate',
-                      content: 'GrabPay',
-                      imageUrl: 'assets/image/icon/Wallet-_icon.png'),
-                  CardOtherFeature(
-                      title: 'Use Point',
-                      content: '758',
-                      imageUrl: 'assets/image/icon/Crown_icon.png'),
+        Stack(
+          children: [
+            Column(
+              children: [
+                Container(
+                  width: double.infinity,
+                  height: 64,
+                  color: bgGreenColor,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 12),
+                  child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const SizedBox(height: 63),
+                        handleMenu(),
+                        const SizedBox(height: 30),
+                        Row(
+                          children: const [
+                            CardOtherFeature(
+                                title: 'Activate',
+                                content: 'GrabPay',
+                                imageUrl: 'assets/image/icon/Wallet-_icon.png'),
+                            CardOtherFeature(
+                                title: 'Use Point',
+                                content: '758',
+                                imageUrl: 'assets/image/icon/Crown_icon.png'),
+                          ],
+                        ),
+                        const SizedBox(height: 38),
+                        Text(
+                          'Celebrate Mid-Autumn Festival',
+                          style: sanomatBlack.copyWith(
+                            fontSize: 18,
+                            fontWeight: medium,
+                          ),
+                        ),
+                        const SizedBox(height: 16),
+                        GridView.count(
+                          crossAxisCount: 2,
+                          crossAxisSpacing: 12,
+                          mainAxisSpacing: 12,
+                          childAspectRatio: 0.6,
+                          physics: const NeverScrollableScrollPhysics(),
+                          shrinkWrap: true,
+                          children: const [
+                            CardPromo(
+                                imageUrl: 'assets/image/promo1.png',
+                                title: 'Order mooncakes to gift & to enjoy',
+                                expiredPromo: 'Until 21 Sep'),
+                            CardPromo(
+                                imageUrl: 'assets/image/promo2.png',
+                                title: 'Plus an EXTRA \$20 OFF on groceries',
+                                expiredPromo: 'Until 31 Aug')
+                          ],
+                        ),
+                        const SizedBox(height: 20),
+                        // Text('Tes'),
+                      ]),
+                ),
+              ],
+            ),
+            Container(
+              margin: const EdgeInsets.only(top: 30, left: 12, right: 12),
+              width: MediaQuery.of(context).size.width - (2 * 12),
+              height: 56,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: whiteColor,
+              ),
+              child: Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(18.0),
+                    child: Image.asset('assets/image/icon/Search_icon.png',
+                        width: 20, height: 20),
+                  ),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width - 155,
+                    child: TextFormField(
+                        cursorColor: greenColor,
+                        style: sanomatBlack.copyWith(fontSize: 16),
+                        decoration: InputDecoration(
+                          hintText: 'Starbucks',
+                          focusedBorder: InputBorder.none,
+                          enabledBorder: InputBorder.none,
+                          contentPadding: EdgeInsets.zero,
+                          hintStyle: sanomatSubtitle2.copyWith(fontSize: 16),
+                        )),
+                  ),
+                  const VerticalDivider(
+                    thickness: 1.5,
+                  ),
+                  GestureDetector(
+                    onTap: (){},
+                    child: Padding(
+                      padding: const EdgeInsets.all(17),
+                      child: Image.asset('assets/image/icon/Scanner_icon.png',
+                          width: 21.5, height: 21.5, fit: BoxFit.cover),
+                    ),
+                  )
                 ],
               ),
-              const SizedBox(height: 38),
-              Text(
-                'Celebrate Mid-Autumn Festival',
-                style: sanomatBlack.copyWith(
-                  fontSize: 18,
-                  fontWeight: medium,
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ],
     );
