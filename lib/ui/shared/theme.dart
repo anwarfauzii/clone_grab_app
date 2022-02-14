@@ -5,6 +5,7 @@ Color bgGreyColor = const Color(0xffF9F9F9);
 Color bgMenuUnselectColor = const Color(0xff9A9A9A);
 Color greenColor = const Color(0xff4FAE5A);
 Color greenColor2 = const Color(0xff61BD79);
+Color greenColor3 = const Color(0xff4FAE4F);
 Color whiteColor = const Color(0xffFFFFFF);
 Color blackColor = const Color(0xff000000);
 Color subtitleColor = const Color(0xff676767);
@@ -22,6 +23,7 @@ TextStyle sanomatGreen =
     TextStyle(fontFamily: 'Sanomat Sans', color: greenColor);
 TextStyle sanomatGreen2 =
     TextStyle(fontFamily: 'Sanomat Sans', color: greenColor2);
+TextStyle sanomatGreen3 = TextStyle(fontFamily: 'Sanomat Sans', color: greenColor3);
 TextStyle sanomatWhite =
     TextStyle(fontFamily: 'Sanomat Sans', color: whiteColor);
 TextStyle sanomatBlack =

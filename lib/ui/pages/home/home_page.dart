@@ -1,3 +1,4 @@
+import 'package:clone_grab/ui/pages/how_to_pay_page.dart';
 import 'package:clone_grab/ui/shared/theme.dart';
 import 'package:clone_grab/ui/widget/card_other_feature.dart';
 import 'package:clone_grab/ui/widget/card_promo.dart';
@@ -66,6 +67,58 @@ class HomePage extends StatelessWidget {
                 title: 'Other'),
           ],
         ),
+      );
+    }
+
+    handleShowDialog() {
+      return showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(14),
+            ),
+            title: Text(
+              '\"Grab\" Would Like to Access the Camera',
+              textAlign: TextAlign.center,
+              style: sanomatBlack.copyWith(fontWeight: medium, fontSize: 17),
+            ),
+            content: Text(
+              'This let you scans code for payments and take photo for catch or support',
+              textAlign: TextAlign.center,
+              style: sanomatBlack.copyWith(fontSize: 13),
+            ),
+            actions: [
+              Expanded(
+                child: Column(
+                  children: [
+                    const Divider(thickness: 2),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        TextButton(
+                          onPressed: () => Navigator.pop(context),
+                          child: const Text('Don\'t Allow'),
+                        ),
+                        const VerticalDivider(),
+                        TextButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const HowToPayPage()));
+                          },
+                          child: const Text('OK'),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              )
+            ],
+          );
+        },
       );
     }
 
@@ -166,7 +219,7 @@ class HomePage extends StatelessWidget {
                     thickness: 1.5,
                   ),
                   GestureDetector(
-                    onTap: (){},
+                    onTap: handleShowDialog,
                     child: Padding(
                       padding: const EdgeInsets.all(17),
                       child: Image.asset('assets/image/icon/Scanner_icon.png',

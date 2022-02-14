@@ -20,6 +20,8 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     body() {
       switch (currentIndex) {
+        case 0:
+          return const HomePage();
         case 1:
           return const ActivityPage();
         case 2:
