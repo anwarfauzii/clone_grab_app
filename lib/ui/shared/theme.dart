@@ -8,6 +8,7 @@ Color greenColor2 = const Color(0xff61BD79);
 Color greenColor3 = const Color(0xff4FAE4F);
 Color whiteColor = const Color(0xffFFFFFF);
 Color blackColor = const Color(0xff000000);
+Color blackColor2 = const Color(0xff252525);
 Color subtitleColor = const Color(0xff676767);
 Color subtitleColor2 = const Color(0xff3E3E3E);
 Color subtitleColor3 = const Color(0xffC5C5C5);
@@ -28,6 +29,7 @@ TextStyle sanomatWhite =
     TextStyle(fontFamily: 'Sanomat Sans', color: whiteColor);
 TextStyle sanomatBlack =
     TextStyle(fontFamily: 'Sanomat Sans', color: blackColor);
+TextStyle sanomatBlack2 = TextStyle(fontFamily: 'Sanomat Sans',color: blackColor2);
 TextStyle sanomatSubtitle =
     TextStyle(fontFamily: 'Sanomat Sans', color: subtitleColor);
 TextStyle sanomatSubtitle2 =

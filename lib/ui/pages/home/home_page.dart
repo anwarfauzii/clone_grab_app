@@ -1,8 +1,8 @@
-import 'package:clone_grab/ui/pages/how_to_pay_page.dart';
-import 'package:clone_grab/ui/shared/theme.dart';
-import 'package:clone_grab/ui/widget/card_other_feature.dart';
-import 'package:clone_grab/ui/widget/card_promo.dart';
-import 'package:clone_grab/ui/widget/custom_menu.dart';
+import '../qr_code_page.dart';
+import '../../shared/theme.dart';
+import '../../widget/card_other_feature.dart';
+import '../../widget/card_promo.dart';
+import '../../widget/custom_menu.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -107,7 +107,7 @@ class HomePage extends StatelessWidget {
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) =>
-                                        const HowToPayPage()));
+                                        const QRCodePage()));
                           },
                           child: const Text('OK'),
                         ),

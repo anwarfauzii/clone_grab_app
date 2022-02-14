@@ -87,28 +87,27 @@ class HowToPayPage extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 74),
-               SizedBox(
-                      width: double.infinity,
-                      height: 48,
-                      child: ElevatedButton(
-                        onPressed: () {},
-                        style: ButtonStyle(
-                          backgroundColor:
-                              MaterialStateProperty.all<Color>(greenColor),
-                          shape:
-                              MaterialStateProperty.all<RoundedRectangleBorder>(
-                            RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8),
-                            ),
-                          ),
-                        ),
-                        child: Text(
-                          'Where can I use GrapPay?',
-                          style: poppinsWhite.copyWith(
-                              fontSize: 16, fontWeight: bold),
+                SizedBox(
+                  width: double.infinity,
+                  height: 48,
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateProperty.all<Color>(greenColor),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8),
                         ),
                       ),
                     ),
+                    child: Text(
+                      'Where can I use GrapPay?',
+                      style:
+                          poppinsWhite.copyWith(fontSize: 16, fontWeight: bold),
+                    ),
+                  ),
+                ),
                 const SizedBox(height: 86),
                 Text(
                   'How to Pay Merchants',
@@ -117,10 +116,7 @@ class HowToPayPage extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 40),
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                  
+                Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
                   Image.asset('assets/image/Line_pay_merchant.png',
                       width: 24, height: 431, fit: BoxFit.cover),
                   const SizedBox(width: 16),
