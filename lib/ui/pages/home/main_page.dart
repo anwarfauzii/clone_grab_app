@@ -37,7 +37,7 @@ class _MainPageState extends State<MainPage> {
 
     bottomNavBar() {
       return SizedBox(
-        height: 60,
+        height: 70,
         child: BottomNavigationBar(
           currentIndex: currentIndex,
           backgroundColor: whiteColor,
@@ -48,45 +48,61 @@ class _MainPageState extends State<MainPage> {
           },
           selectedLabelStyle: sanomatGreen,
           selectedItemColor: greenColor,
+          type: BottomNavigationBarType.fixed,
           items: [
             BottomNavigationBarItem(
-                icon: Image.asset(
-                  'assets/image/icon/home.png',
-                  width: 22,
-                  height: 22,
-                  // color: currentIndex == 0 ? bgGreenColor : bgMenuUnselectColor,
+                icon: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Image.asset(
+                    'assets/image/icon/home.png',
+                    width: 22,
+                    height: 22,
+                    // color: currentIndex == 0 ? bgGreenColor : bgMenuUnselectColor,
+                  ),
                 ),
                 label: 'Home'),
             BottomNavigationBarItem(
-                icon: Image.asset(
-                  'assets/image/icon/Activity_icon.png',
-                  width: 22,
-                  height: 22,
-                  // color: currentIndex == 1 ? bgGreenColor : bgMenuUnselectColor,
+                icon: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Image.asset(
+                    'assets/image/icon/Activity_icon.png',
+                    width: 22,
+                    height: 22,
+                    // color: currentIndex == 1 ? bgGreenColor : bgMenuUnselectColor,
+                  ),
                 ),
                 label: 'Activity'),
             BottomNavigationBarItem(
-                icon: Image.asset(
-                  'assets/image/icon/Payment_icon.png',
-                  width: 22,
-                  height: 22,
-                  // color: currentIndex == 2 ? bgGreenColor : bgMenuUnselectColor,
+                icon: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Image.asset(
+                    'assets/image/icon/Payment_icon.png',
+                    width: 22,
+                    height: 22,
+                    // color: currentIndex == 2 ? bgGreenColor : bgMenuUnselectColor,
+                  ),
                 ),
                 label: 'Payment'),
             BottomNavigationBarItem(
-                icon: Image.asset(
-                  'assets/image/icon/Inbox_icon.png',
-                  width: 22,
-                  height: 22,
-                  // color: currentIndex == 2 ? bgGreenColor : bgMenuUnselectColor,
+                icon: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Image.asset(
+                    'assets/image/icon/Inbox_icon.png',
+                    width: 22,
+                    height: 22,
+                    // color: currentIndex == 2 ? bgGreenColor : bgMenuUnselectColor,
+                  ),
                 ),
                 label: 'Inbox'),
             BottomNavigationBarItem(
-                icon: Image.asset(
-                  'assets/image/icon/Profile_icon.png',
-                  width: 22,
-                  height: 22,
-                  // color: currentIndex == 2 ? bgGreenColor : bgMenuUnselectColor,
+                icon: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Image.asset(
+                    'assets/image/icon/Profile_icon.png',
+                    width: 22,
+                    height: 22,
+                    // color: currentIndex == 2 ? bgGreenColor : bgMenuUnselectColor,
+                  ),
                 ),
                 label: 'Account'),
           ],

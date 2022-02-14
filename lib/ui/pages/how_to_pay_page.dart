@@ -15,23 +15,15 @@ class HowToPayPage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // AppBar(
-                //   leading: Icon(
-                //     Icons.arrow_back_ios,
-                //     color: blackColor,
-                //   ),
-                //   backgroundColor: whiteColor,
-                //   title: Text(
-                //     'How To Pay',
-                //     style: sanomatBlack.copyWith(fontWeight: medium, fontSize: 16),
-                //   ),
-                // ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Icon(
-                      Icons.arrow_back_ios,
-                      color: blackColor,
+                    IconButton(
+                      onPressed: () => Navigator.pop(context),
+                      icon: Icon(
+                        Icons.arrow_back_ios,
+                        color: blackColor,
+                      ),
                     ),
                     Text(
                       'How To Pay',

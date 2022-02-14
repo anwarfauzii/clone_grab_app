@@ -1,6 +1,8 @@
-import 'package:clone_grab/ui/pages/how_to_pay_page.dart';
-import 'package:clone_grab/ui/shared/theme.dart';
 import 'package:flutter/material.dart';
+
+import 'how_to_pay_page.dart';
+import '../shared/theme.dart';
+import 'top_up_page.dart';
 
 class QRCodePage extends StatelessWidget {
   const QRCodePage({Key? key}) : super(key: key);
@@ -77,7 +79,10 @@ class QRCodePage extends StatelessWidget {
                           width: 90,
                           height: 25,
                           child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () => Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const TopUpPage())),
                             style: ButtonStyle(
                               backgroundColor: MaterialStateProperty.all<Color>(
                                   const Color(0xff1281E7)),
